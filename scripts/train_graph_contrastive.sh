@@ -1,0 +1,17 @@
+python src/train_graph_gen_contrastive.py \
+--data_dir=contrastive_data \
+--model_name_or_path=t5-large \
+--learning_rate=3e-5 \
+--train_batch_size=8 \
+--eval_batch_size=8 \
+--max_source_length=150 \
+--max_target_length=150 \
+--val_max_target_length=150 \
+--test_max_target_length=150 \
+--output_dir=models/contrastive \
+--num_train_epochs=15  \
+--cache_dir cache \
+--gpus=1 \
+--do_train \
+--do_predict \
+--eval_beams 4
